@@ -11,6 +11,11 @@ import MoviesService from "../models/movies/service";
 export class MoviesController {
   private moviesService: MoviesService = new MoviesService();
 
+  /**
+   * get the movies using the omdb api key, check if that movie exist in the bd, if doesn't exist, then it is saved in the mongodb.
+   * @param req
+   * @param res
+   */
   public async getMovies(req: Request, res: Response) {
     let result: any[] = await axios
       .get(

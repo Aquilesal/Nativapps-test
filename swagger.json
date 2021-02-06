@@ -37,6 +37,25 @@
     }
   },
   "definitions": {
+    "Movie": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "year": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        }
+      }
+    },
     "MovieResponse": {
       "properties": {
         "STATUS": {
@@ -46,23 +65,8 @@
           "type": "string"
         },
         "DATA": {
-          "properties": {
-            "id": {
-              "type": "string"
-            },
-            "name": {
-              "type": "string"
-            },
-            "year": {
-              "type": "string"
-            },
-            "type": {
-              "type": "string"
-            },
-            "image": {
-              "type": "string"
-            }
-          }
+          "type": "array",
+          "$ref": "#/definitions/Movie"
         }
       }
     }
