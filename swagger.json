@@ -1,0 +1,70 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Nativapps-Aquiles Pulido",
+    "description": "Nativapps Test",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/api/",
+  "tags": [
+    {
+      "name": "Movies",
+      "description": "API for movies in the system"
+    }
+  ],
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/movies": {
+      "get": {
+        "tags": ["Movies"],
+        "summary": "Get all movies with the name of 'Love'",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/MovieResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "MovieResponse": {
+      "properties": {
+        "STATUS": {
+          "type": "string"
+        },
+        "MESSAGE": {
+          "type": "string"
+        },
+        "DATA": {
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "year": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "image": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
