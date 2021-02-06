@@ -11,7 +11,7 @@ cd NativApps
 npm install
 ```
 
-## Steps for read-only access
+## Start
 
 To start the express server, run the following
 
